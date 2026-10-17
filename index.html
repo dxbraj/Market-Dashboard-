@@ -1,1 +1,50 @@
-less than h1, greater than Market Dashboard, less than slash h1, then a new line, then type test page. Tell me when that's pasted.
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>Market Brief Dashboard</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#121d2e;--line:#26364b;--muted:#9fb0c6;--text:#edf4ff;--blue:#78b7ff;--green:#50d6a0;--red:#ff7f86;--amber:#ffd27a}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#101a2a,#0b1220 280px);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1000px;margin:auto;padding:18px 14px 40px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.brand{font-size:22px;font-weight:800;letter-spacing:-.5px}.sub{color:var(--muted);font-size:12px}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 10px;color:var(--amber);font-size:12px}
+h2{font-size:16px;margin:22px 0 10px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{background:rgba(18,29,46,.95);border:1px solid var(--line);border-radius:15px;padding:14px;min-width:0}.label{color:var(--muted);font-size:12px}.value{font-size:21px;font-weight:750;margin-top:5px}.change{font-size:12px;color:var(--muted);margin-top:4px}.wide{grid-column:1/-1}.notice{border-left:3px solid var(--amber);padding:10px 12px;background:#2a251a;border-radius:8px;color:#f6e6bd;font-size:13px;margin-top:14px}
+ul{padding-left:18px;margin:8px 0 0;color:#dce7f6}li{margin:7px 0}.tag{display:inline-block;border:1px solid var(--line);border-radius:7px;padding:3px 7px;font-size:11px;color:var(--muted);margin:3px 4px 0 0}
+.footer{color:var(--muted);font-size:11px;margin-top:20px}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:10px}.smallbtn{background:#1b2d44;border:1px solid #36516f;color:var(--text);padding:8px 10px;border-radius:9px;font-size:12px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.brand{font-size:27px}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="top">
+  <div><div class="brand">Market Brief <span style="color:var(--blue)">Dashboard</span></div><div class="sub">India • Global cues • Commodities • Crypto</div></div>
+  <div class="pill" id="status">DEMO · LIVE DATA NOT CONNECTED</div>
+</header>
+<div class="notice"><strong>Demo mode:</strong> These are sample placeholders, not live prices or trading signals. Do not use them to place a trade. Live Angel One data needs a separate secure backend.</div>
+<div class="sectionhead"><h2>Market snapshot</h2><span class="tag" id="clock">Local time loading…</span></div>
+<section class="grid">
+  <article class="card"><div class="label">NIFTY 50</div><div class="value">—</div><div class="change">Waiting for market feed</div></article>
+  <article class="card"><div class="label">BANK NIFTY</div><div class="value">—</div><div class="change">Waiting for market feed</div></article>
+  <article class="card"><div class="label">INDIA VIX</div><div class="value">—</div><div class="change">Waiting for market feed</div></article>
+  <article class="card"><div class="label">GOLD</div><div class="value">—</div><div class="change">Waiting for market feed</div></article>
+  <article class="card"><div class="label">CRUDE OIL</div><div class="value">—</div><div class="change">Waiting for market feed</div></article>
+  <article class="card"><div class="label">BITCOIN (BTC)</div><div class="value">—</div><div class="change">Waiting for market feed</div></article>
+</section>
+<h2>Pre-market brief</h2>
+<section class="grid">
+ <article class="card wide"><div class="label">Today's key view</div><p style="margin-bottom:0">The briefing will appear here once a trusted news and market-data source is connected.</p></article>
+ <article class="card"><div class="label">Global cues</div><ul><li>US indices: awaiting data</li><li>Asian markets: awaiting data</li><li>Dollar and bond yields: awaiting data</li></ul></article>
+ <article class="card"><div class="label">Events & results</div><ul><li>Economic calendar: awaiting source</li><li>Company results: awaiting source</li><li>Major headlines: awaiting source</li></ul></article>
+</section>
+<h2>Options & trade setup watch</h2>
+<section class="grid">
+ <article class="card"><div class="label">NIFTY option chain</div><p>Open interest, change in OI, PCR, and strike-wise activity will show after the permitted feed is connected.</p><span class="tag">Not connected</span></article>
+ <article class="card"><div class="label">Trend-change alerts</div><p>Alerts should be based on defined rules and display timestamp, trigger, invalidation level, and risk.</p><span class="tag">No signals active</span></article>
+ <article class="card"><div class="label">Risk checklist</div><ul><li>Confirm the live timestamp</li><li>Check stop-loss and position size</li><li>Do not trade on stale data</li></ul></article>
+</section>
+<div class="footer">Last page refresh: <span id="refresh"></span> · The page refreshes its display clock only. It does not fetch live prices yet. Market data may be delayed or unavailable depending on the provider.</div>
+</main>
+<script>
+function tick(){const d=new Date();document.getElementById('clock').textContent=d.toLocaleString(undefined,{dateStyle:'medium',timeStyle:'medium'});document.getElementById('refresh').textContent=d.toLocaleTimeString();}tick();setInterval(tick,1000);
+</script>
+</body></html>
