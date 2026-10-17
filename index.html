@@ -1,1 +1,33 @@
-test page 1
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market Dashboard</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1220;--panel:#121c2e;--line:#26354b;--text:#edf3fb;--muted:#9fb0c8;--accent:#65b8ff;--green:#5ee0a0;--red:#ff8585}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}header{padding:24px 18px;background:linear-gradient(120deg,#142b48,#101827);border-bottom:1px solid var(--line)}.wrap{max-width:1180px;margin:auto}h1{margin:0;font-size:clamp(25px,4vw,36px)}header p{color:var(--muted);margin:6px 0 0}.notice{margin:18px 0;padding:12px 14px;border:1px solid #80672c;background:#302817;color:#ffdfa0;border-radius:10px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0}.card,section{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.label{font-size:13px;color:var(--muted)}.value{font-size:25px;font-weight:700;margin:8px 0}.tag{display:inline-block;border:1px solid var(--line);padding:3px 8px;border-radius:99px;color:var(--muted);font-size:12px}.section-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:16px}h2{font-size:19px;margin:0 0 12px}h3{font-size:15px;margin:12px 0 4px}p{margin:6px 0;color:var(--muted)}ul{margin:6px 0;padding-left:20px;color:var(--muted)}.placeholder{color:#ffdfa0;font-weight:600}footer{padding:20px;text-align:center;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Market Dashboard</h1><p>India • US markets • Commodities • Crypto • Options research</p></div></header>
+<main class="wrap" style="padding:0 16px">
+<div class="notice"><strong>Demo mode:</strong> Prices and signals are not connected yet. Do not use this page alone to make trading decisions.</div>
+<div class="grid">
+<div class="card"><div class="label">NIFTY 50</div><div class="value">—</div><span class="tag">Live feed not connected</span></div>
+<div class="card"><div class="label">BANK NIFTY</div><div class="value">—</div><span class="tag">Live feed not connected</span></div>
+<div class="card"><div class="label">INDIA VIX</div><div class="value">—</div><span class="tag">Live feed not connected</span></div>
+<div class="card"><div class="label">S&P 500</div><div class="value">—</div><span class="tag">Live feed not connected</span></div>
+<div class="card"><div class="label">GOLD</div><div class="value">—</div><span class="tag">Live feed not connected</span></div>
+<div class="card"><div class="label">CRUDE OIL</div><div class="value">—</div><span class="tag">Live feed not connected</span></div>
+<div class="card"><div class="label">BITCOIN (BTC)</div><div class="value">—</div><span class="tag">Live feed not connected</span></div>
+</div>
+<div class="section-grid">
+<section><h2>Indian Market Watch</h2><h3>Nifty 50 & Bank Nifty</h3><p>Trend, key levels, market breadth, and volatility will appear here when a trusted data source is connected.</p><h3>Stocks & OI scan</h3><p>Track unusual open-interest changes, volume, price movement, and possible long build-up or short covering. OI alone does not confirm direction.</p></section>
+<section><h2>Options Chain Analysis</h2><p>Underlying: <span class="placeholder">Awaiting live data</span></p><p>Expiry, strike-wise Call/Put OI, change in OI, volume, implied volatility, and put-call ratio will appear here after integration.</p><p><strong>Signal status:</strong> Not available — data feed not connected.</p></section>
+<section><h2>US Markets & Major Companies</h2><p>Monitor S&P 500, Nasdaq, Dow Jones, and selected company performance after connecting a market data provider.</p><p><strong>Status:</strong> <span class="placeholder">Awaiting data</span></p></section>
+<section><h2>Commodities & Crypto</h2><p>Gold, crude oil, and Bitcoin overview with trend, support/resistance, volatility, and major catalysts.</p><p><strong>Status:</strong> <span class="placeholder">Awaiting data</span></p></section>
+<section><h2>Global Financial News</h2><ul><li>Central-bank decisions and economic releases</li><li>Inflation, jobs, and growth data</li><li>Geopolitical events and energy-market developments</li><li>Company earnings and major announcements</li></ul><p>News headlines are not connected yet.</p></section>
+<section><h2>Trading Plan & Risk</h2><p>Before any trade, record the setup, entry trigger, stop-loss, target, position size, and risk/reward.</p><p>Do not treat a dashboard signal as a guarantee. Confirm prices and orders with your broker.</p></section>
+</div>
+</main><footer>Market Dashboard • Starter layout • No live market data connected</footer>
+</body></html>
